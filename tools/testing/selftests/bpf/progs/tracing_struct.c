@@ -5,6 +5,10 @@
 #include <bpf/bpf_tracing.h>
 #include <bpf/bpf_helpers.h>
 
+#ifndef __clang__
+#error "TEST"
+#endif
+
 struct bpf_testmod_struct_arg_1 {
 	int a;
 };
